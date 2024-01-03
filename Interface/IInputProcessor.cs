@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleEmoji.Interface
 {
-    public interface IInputLoader
+    public interface IInputProcessor
     {
-         public  string CapitalizeFirstLetter(string word);
+         public  string[] Input();
     }
 }

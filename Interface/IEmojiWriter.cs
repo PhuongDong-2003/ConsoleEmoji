@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleEmoji.Interface
 {
-    public interface IEmojiSolver
+    public interface IEmojiWriter
     {
-        public  Task<byte[]> LoadImageFromGitHub(string name);
         public void SaveImage(string name, byte[] content);
+        
+ 
+    
     }
 }

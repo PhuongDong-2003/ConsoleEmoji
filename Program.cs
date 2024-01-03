@@ -8,41 +8,32 @@ using ConsoleEmoji.Service;
 
 class Program
 {
-
-
     static async Task Main()
     {
-        InputLoaderService inputLoaderService = new InputLoaderService();
-        EmojiSolverService emojiSolverService = new EmojiSolverService();
+        InputProcessorService inputProcessorService = new InputProcessorService();
+        EmojiDownloaderService emojiDownloaderService = new EmojiDownloaderService();
+        EmojiWriterService emojiWriterService = new EmojiWriterService();
 
-        Console.WriteLine("Nhập tên hình ảnh (cách nhau bởi dấu phẩy):");
-        string imageNamesInput = Console.ReadLine();
+        var imageNamesInput = inputProcessorService.Input();
 
-        if (!string.IsNullOrWhiteSpace(imageNamesInput))
+        foreach (var imageName in imageNamesInput)
         {
-            string[] imageNames = imageNamesInput.Split(',');
+            string formattedName = emojiDownloaderService.CapitalizeFirstLetter(imageName);
+            byte[] imageBytes = await emojiDownloaderService.LoadImageFromGitHub(formattedName + "/3D/" + imageName.Replace(" ", "_").Trim() + "_3d.png");
 
-            foreach (var imageName in imageNames)
+            if (imageBytes != null)
             {
-                string formattedName = inputLoaderService.CapitalizeFirstLetter(imageName.Trim());
-                byte[] imageBytes = await emojiSolverService.LoadImageFromGitHub(formattedName + "/3D/" + imageName.Replace(" ", "_").Trim() + "_3d.png");
-
-                if (imageBytes != null)
-                {
-                    emojiSolverService.SaveImage(formattedName, imageBytes);
-                    Console.WriteLine($"Hình ảnh '{formattedName}' đã được lấy và lưu thành công.");
-                }
-                else
-                {
-                    Console.WriteLine($"Không thể lấy và lưu hình ảnh '{formattedName}'.");
-                }
+                emojiWriterService.SaveImage(formattedName, imageBytes);
+                Console.WriteLine($"Hình ảnh '{formattedName}' đã được lấy và lưu thành công.");
+            }
+            else
+            {
+                Console.WriteLine($"Không thể lấy và lưu hình ảnh '{formattedName}'.");
             }
         }
-        else
-        {
-            Console.WriteLine("Bạn chưa nhập tên hình ảnh.");
-        }
+
     }
+
 
 
 
