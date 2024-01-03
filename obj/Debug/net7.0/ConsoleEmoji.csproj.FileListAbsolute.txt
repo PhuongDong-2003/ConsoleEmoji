@@ -1,0 +1,15 @@
+D:\FPT_Telecom\BT\ConsoleEmoji\bin\Debug\net7.0\ConsoleEmoji.exe
+D:\FPT_Telecom\BT\ConsoleEmoji\bin\Debug\net7.0\ConsoleEmoji.deps.json
+D:\FPT_Telecom\BT\ConsoleEmoji\bin\Debug\net7.0\ConsoleEmoji.runtimeconfig.json
+D:\FPT_Telecom\BT\ConsoleEmoji\bin\Debug\net7.0\ConsoleEmoji.dll
+D:\FPT_Telecom\BT\ConsoleEmoji\bin\Debug\net7.0\ConsoleEmoji.pdb
+D:\FPT_Telecom\BT\ConsoleEmoji\obj\Debug\net7.0\ConsoleEmoji.csproj.AssemblyReference.cache
+D:\FPT_Telecom\BT\ConsoleEmoji\obj\Debug\net7.0\ConsoleEmoji.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT_Telecom\BT\ConsoleEmoji\obj\Debug\net7.0\ConsoleEmoji.AssemblyInfoInputs.cache
+D:\FPT_Telecom\BT\ConsoleEmoji\obj\Debug\net7.0\ConsoleEmoji.AssemblyInfo.cs
+D:\FPT_Telecom\BT\ConsoleEmoji\obj\Debug\net7.0\ConsoleEmoji.csproj.CoreCompileInputs.cache
+D:\FPT_Telecom\BT\ConsoleEmoji\obj\Debug\net7.0\ConsoleEmoji.dll
+D:\FPT_Telecom\BT\ConsoleEmoji\obj\Debug\net7.0\refint\ConsoleEmoji.dll
+D:\FPT_Telecom\BT\ConsoleEmoji\obj\Debug\net7.0\ConsoleEmoji.pdb
+D:\FPT_Telecom\BT\ConsoleEmoji\obj\Debug\net7.0\ConsoleEmoji.genruntimeconfig.cache
+D:\FPT_Telecom\BT\ConsoleEmoji\obj\Debug\net7.0\ref\ConsoleEmoji.dll
